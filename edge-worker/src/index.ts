@@ -83,8 +83,30 @@ export default {
             });
         }
 
-        // GET: retrieve events
+        // GET: retrieve events or anchors
         if (method === "GET") {
+            // Handle /v1/anchors endpoint
+            if (url.pathname === "/v1/anchors") {
+                const anchors = [
+                    { id: "anchor-1", name: "Columbus", lat: 39.9612, lon: -82.9988, date: "2024-06-04", day: 1, notes: "Starting point" },
+                    { id: "anchor-4", name: "Milwaukee", lat: 43.0389, lon: -87.9065, date: "2024-06-07", day: 4, notes: "" },
+                    { id: "anchor-12", name: "Seattle", lat: 47.6062, lon: -122.3321, date: "2024-06-15", day: 12, notes: "" },
+                    { id: "anchor-17", name: "San Francisco", lat: 37.7749, lon: -122.4194, date: "2024-06-20", day: 17, notes: "" },
+                    { id: "anchor-20", name: "Los Angeles", lat: 34.0522, lon: -118.2437, date: "2024-06-23", day: 20, notes: "1-day stay" },
+                    { id: "anchor-27", name: "Denver", lat: 39.7392, lon: -104.9903, date: "2024-06-30", day: 27, notes: "Josh coffee stop" },
+                    { id: "anchor-35", name: "Las Vegas", lat: 36.1699, lon: -115.1398, date: "2024-07-08", day: 35, notes: "" },
+                    { id: "anchor-48", name: "Dallas", lat: 32.7767, lon: -96.7970, date: "2024-07-21", day: 48, notes: "" },
+                    { id: "anchor-53", name: "Nashville", lat: 36.1627, lon: -86.7816, date: "2024-07-26", day: 53, notes: "Brady/Erin pulled forward" },
+                    { id: "anchor-59", name: "New York", lat: 40.7128, lon: -74.0060, date: "2024-08-01", day: 59, notes: "" },
+                    { id: "anchor-61", name: "Portland", lat: 43.6591, lon: -70.2568, date: "2024-08-03", day: 61, notes: "End point" }
+                ];
+                
+                return new Response(JSON.stringify(anchors), {
+                    status: 200,
+                    headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
+                });
+            }
+            
             const id = url.searchParams.get("id");
             if (id) {
                 const item = await env.APP_KV.get(id);

@@ -1,0 +1,8 @@
+category,description,original_budget,updated_budget,difference,notes
+lodging,Hotels and accommodations,3000,2910,-90,Columbus removed savings
+charging,EV charging costs,800,778,-22,Optimized charging plan
+fuel,Backup fuel costs,50,50,0,Emergency only
+food,Meals and dining,2400,2400,0,No change
+activities,Entertainment and tours,1200,1200,0,No change
+miscellaneous,Unexpected expenses,500,500,0,Buffer maintained
+total,Total trip budget,7950,7838,-112,Net savings from v3-g changes

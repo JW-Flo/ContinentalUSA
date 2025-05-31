@@ -27,4 +27,44 @@ export class DefaultService {
             mediaType: 'application/json',
         });
     }
+    /**
+     * Get anchor points for 60-day itinerary
+     * @returns any List of anchor points with coordinates and timing
+     * @throws ApiError
+     */
+    public static getV1Anchors(): CancelablePromise<Array<{
+        /**
+         * Unique identifier for the anchor point
+         */
+        id: string;
+        /**
+         * Location name
+         */
+        name: string;
+        /**
+         * Latitude coordinate
+         */
+        lat: number;
+        /**
+         * Longitude coordinate
+         */
+        lon: number;
+        /**
+         * Expected arrival date
+         */
+        date: string;
+        /**
+         * Day number in the 60-day itinerary
+         */
+        day: number;
+        /**
+         * Optional notes about this stop
+         */
+        notes?: string;
+    }>> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/v1/anchors',
+        });
+    }
 }

@@ -15,3 +15,45 @@ paths:
       responses:
         "200":
           description: OK
+  /v1/anchors:
+    get:
+      summary: Get anchor points for 60-day itinerary
+      responses:
+        "200":
+          description: List of anchor points with coordinates and timing
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      description: Unique identifier for the anchor point
+                    name:
+                      type: string
+                      description: Location name
+                    lat:
+                      type: number
+                      description: Latitude coordinate
+                    lon:
+                      type: number
+                      description: Longitude coordinate
+                    date:
+                      type: string
+                      format: date
+                      description: Expected arrival date
+                    day:
+                      type: integer
+                      description: Day number in the 60-day itinerary
+                    notes:
+                      type: string
+                      description: Optional notes about this stop
+                  required:
+                    - id
+                    - name
+                    - lat
+                    - lon
+                    - date
+                    - day

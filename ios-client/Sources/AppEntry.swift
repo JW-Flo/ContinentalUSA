@@ -16,6 +16,11 @@ struct ContinentalApp: App {
                         Label("Map", systemImage: "map")
                     }
 
+                TimelineTabView()
+                    .tabItem {
+                        Label("Timeline", systemImage: "clock")
+                    }
+
                 PeopleTabView()
                     .tabItem {
                         Label("People", systemImage: "person.3")

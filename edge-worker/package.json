@@ -4,11 +4,15 @@
     "private": true,
     "scripts": {
         "build": "wrangler build",
-        "deploy": "wrangler publish"
+        "deploy": "wrangler publish",
+        "test": "vitest run",
+        "test:watch": "vitest"
     },
     "dependencies": {},
     "devDependencies": {
         "wrangler": "^3.28.2",
-        "typescript": "^4.9.5"
+        "typescript": "^4.9.5",
+        "vitest": "^1.0.0",
+        "@cloudflare/workers-types": "^4.0.0"
     }
 }
