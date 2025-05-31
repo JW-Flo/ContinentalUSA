@@ -11,6 +11,11 @@ jobs:
           cd edge-worker
           npm install
 
+      - name: Run tests
+        run: |
+          cd edge-worker
+          npm test
+
       - uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}

@@ -1,0 +1,31 @@
+leg,start,end,distance_miles,charging_time_min,charging_cost_usd
+1,Columbus OH,Indianapolis IN,176,45,18.50
+2,Indianapolis IN,Chicago IL,183,50,21.00
+3,Chicago IL,Milwaukee WI,92,30,12.75
+4,Milwaukee WI,Minneapolis MN,337,85,34.50
+5,Minneapolis MN,Fargo ND,236,60,24.00
+6,Fargo ND,Bismarck ND,195,50,20.50
+7,Bismarck ND,Billings MT,216,55,22.25
+8,Billings MT,Bozeman MT,142,35,14.75
+9,Bozeman MT,Missoula MT,214,55,23.00
+10,Missoula MT,Spokane WA,161,40,16.50
+11,Spokane WA,Seattle WA,279,70,29.25
+12,Seattle WA,Portland OR,173,45,18.75
+13,Portland OR,Eugene OR,110,30,12.50
+14,Eugene OR,Medford OR,165,40,17.00
+15,Medford OR,Sacramento CA,285,70,30.50
+16,Sacramento CA,San Francisco CA,87,25,11.25
+17,San Francisco CA,San Jose CA,48,20,8.50
+18,San Jose CA,Fresno CA,152,40,16.75
+19,Fresno CA,Los Angeles CA,220,55,24.25
+20,Los Angeles CA,San Diego CA,120,35,15.50
+21,San Diego CA,Phoenix AZ,355,90,38.25
+22,Phoenix AZ,Tucson AZ,116,30,13.00
+23,Tucson AZ,Las Cruces NM,271,70,29.75
+24,Las Cruces NM,Albuquerque NM,225,55,23.50
+25,Albuquerque NM,Santa Fe NM,65,20,8.75
+26,Santa Fe NM,Denver CO,285,70,30.00
+27,Denver CO,Colorado Springs CO,75,25,10.50
+28,Colorado Springs CO,Cheyenne WY,180,45,19.25
+29,Cheyenne WY,Salt Lake City UT,440,110,46.50
+30,Salt Lake City UT,Boise ID,344,85,36.25
