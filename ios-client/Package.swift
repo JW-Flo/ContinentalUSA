@@ -3,7 +3,12 @@ import PackageDescription
 
 let package = Package(
   name: "MCPClient",
-  platforms: [.iOS(.v17)],
+  // Added macOS platform support for OpenAPI generator plugin (requires macOS 10.15+)
+  platforms: [
+    .iOS(.v17),
+    .macOS(.v10_15),
+    .watchOS(.v9)
+  ],
   products: [.library(name: "MCPClient", targets: ["MCPClient"])],
   dependencies: [
     .package(
@@ -13,11 +18,9 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "MCPClient",
-      path: "Sources",
-      plugins: [
-        .plugin(name: "OpenAPIGeneratorPlugin", package: "swift-openapi-generator")
-      ]
+        name: "MCPClient",
+        dependencies: [],
+        path: "Sources"
     )
   ]
 )
